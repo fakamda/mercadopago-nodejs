@@ -1,13 +1,19 @@
 import express from 'express'
 import PaymentRoutes from './router/payment.routes.js'
+import { PORT } from './config.js'
+import morgan from 'morgan';
 
 const app = express();
-const port = process.env.PORT || 3000;
+
 
 app.get('/', (req, res) => {
-  res.send('Hola, mundo!');
-});
+  res.send('inicio');
+})
 
-app.listen(port, () => {
-  console.log(`Servidor en funcionamiento en el puerto ${port}`);
+app.use(morgan('dev'))
+
+app.use(PaymentRoutes)
+
+app.listen(PORT, () => {
+  console.log(`Servidor en funcionamiento en el puerto ${PORT}`);
 });

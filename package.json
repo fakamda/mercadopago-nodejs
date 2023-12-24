@@ -1,0 +1,17 @@
+{
+  "name": "mercadopago-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "configurar-proyecto.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

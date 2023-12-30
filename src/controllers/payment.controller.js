@@ -14,19 +14,20 @@ export const createOrder = async (req, res) => {
         body: {
           items: [
             {
-              id: 1,
+              id: "1",
               title: "Gaming brain",
               quantity: 1,
               unit_price: 500
             }
           ]
         }
-      })
+     })
       console.log(paymentRequest)
-      res.send(paymentRequest)
-    }catch (error) {
-      console.error('error', error)
-    }
+      res.send("Orden creada exitosamente");
+    } catch (error) {
+      console.error('Error al crear la orden:', error);
+      res.status(500).json({ message: "Error interno del servidor" });
+   }
   }
 
 
